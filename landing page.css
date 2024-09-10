@@ -1,0 +1,243 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header Styles */
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header .logo h1 {
+    margin: 0;
+}
+
+header .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header .nav-links li a {
+    color: #fff;
+    padding: 5px 10px;
+    transition: background 0.3s;
+}
+
+header .nav-links li a:hover {
+    background: #555;
+    border-radius: 3px;
+}
+
+header .menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+header .menu-toggle span {
+    background: #fff;
+    margin: 2px 0;
+    width: 25px;
+    height: 3px;
+}
+
+/* Hero Section */
+.hero {
+    background: url('ml.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-content h2 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.hero-content .btn {
+    background: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.hero-content .btn:hover {
+    background: #0056b3;
+}
+
+/* Destinations Section */
+.destinations {
+    padding: 50px 20px;
+    background: #fff;
+    text-align: center;
+}
+
+.destinations h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.destination-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.destination {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    background: #f4f4f4;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.destination img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.destination h3 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+/* Services Section */
+.services {
+    padding: 50px 20px;
+    background:white;
+    text-align: center;
+    background-image: url(os.png);
+    background-size: cover;
+}
+
+.services h2 {
+    font-size: 40px;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    background: #fff;
+    color: #000;
+}
+
+.service-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.service {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.service h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+/* Footer Styles */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer .social-links {
+    margin-top: 10px;
+}
+
+footer .social-links a {
+    margin: 0 10px;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+footer .social-links a:hover {
+    color: #007BFF;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+
+    header .nav-links li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    header .menu-toggle {
+        display: flex;
+    }
+
+    header .menu-toggle.active + .nav-links {
+        display: flex;
+    }
+
+    .destination-container, .service-container {
+        flex-direction: column;
+    }
+
+    .hero-content h2 {
+        font-size: 36px;
+    }
+
+    .hero-content p {
+        font-size: 18px;
+    }
+}
